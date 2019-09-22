@@ -1,0 +1,90 @@
+{
+  "title": "Module 1 - Notions de base sur Docker",
+  "description": "Dans ce laboratoire, nous examinerons l'interface en ligne de commande de Docker et nous exécuterons notre preminer conteneur.",
+  "difficulty": "débutant",
+  "time": "10-15 minutes",
+  "details": {
+    "assets": {
+      "master": [
+        {
+          "file": "answers/*",
+          "target": ".answers"
+        },
+        {
+          "file": "resources/*",
+          "target": "/root/newresources"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Exécuter des commandes de base de Docker",
+        "text": "step1.md"
+      },
+      {
+        "title": "Notions de base d'une image Docker",
+        "text": "step2.md"
+      },
+      {
+        "title": "Exécuter votre premier conteneur",
+        "text": "step3.md"
+      },
+      {
+        "title": "Exécuter des commandes interactives",
+        "text": "step4.md"
+      },
+      {
+        "title": "Exécuter un conteneur en mode détaché",
+        "text": "step5.md"
+      },
+      {
+        "title": "Afficher les journaux des conteneurs",
+        "text": "step6.md"
+      },
+      {
+        "title": "Démarrer, arrêter, retirer le conteneur",
+        "text": "step7.md"
+      },
+      {
+        "title": "Nettoyer les images",
+        "text": "step8.md"
+      },
+      {
+        "title": "Volumes",
+        "text": "step9.md"
+      },
+      {
+        "title": "Plus d'exemples de conteneurs",
+        "text": "step10.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "env-init.sh",
+      "credits": "Developeur(s): [William Hearn](https://sylus.ca) et [Zachary Seguin](https://zacharyseguin.ca)",
+      "courseData": "setup.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "dashboards": [
+      {
+        "name": "Nginx",
+        "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com"
+      },
+      {
+        "name": "Portainer",
+        "href": "https://[[HOST_SUBDOMAIN]]-9000-[[KATACODA_HOST]].environments.katacoda.com"
+      }
+    ],
+    "uisettings": "yaml",
+    "uimessage1": "\u001b[36;1mDigital Academy training.\u001b[0m"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
