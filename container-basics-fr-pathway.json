@@ -1,0 +1,17 @@
+{
+  "title": "Notions de base sur les conteneurs logiciels",
+  "description": "Présenté par l'Académie Numérique - Un survol des conteneurs logiciels.",
+  "icon": "fa-docker",
+  "courses": [
+    {
+      "course_id": "module-1",
+      "title": "Notions de base sur les conteneurs logiciels : Module 1 - Notions de base sur Docker",
+      "description": "Dans ce laboratoire, nous examinerons l'interface en ligne de commande de Docker et nous exécuterons notre preminer conteneur."
+    },
+    {
+      "course_id": "module-2",
+      "title": "Notions de base sur les conteneurs logiciels : Module 1 - Créer des images personnalisées",
+      "description": "Dans ce laboratoire, nous apprendrons à créer nos propres conteneurs avec Docker."
+    }
+  ]
+}
