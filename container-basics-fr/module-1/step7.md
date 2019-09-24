@@ -1,22 +1,22 @@
-In this section we will learn how to stop, start and remove containers.
+Dans cette section, nous apprendrons comment arrêter, démarrer et enlever des conteneurs.
 
-1) Run an Ubuntu:16.04 container docker in detached mode using the sleep function.
+1) Exécutez un docker Ubuntu:16.04 en mode détaché à l'aide de la fonction sommeil.
 
 `docker run -idt --name sleepy ubuntu:16.04 sleep 60m`{{execute}}
 
 `docker container ps`{{execute}}
 
-2) Now let's interact with the sleepy container terminal:
+2) Interagissons maintenant avec le terminal du conteneur sleepy :
 
 `docker container exec -it sleepy bash`{{execute}}
 
-3) Create a file and then exit out of the container terminal:
+3) Créez un fichier et sortez du terminal de conteneurs :
 
 `touch TEST.txt && ls`{{execute}}
 
 `exit`{{execute}}
 
-4) Stop the sleepy container and start it again:
+4) Arrêtez le conteneur sleepy et redémarrez-le :
 
 `docker container stop sleepy`{{execute}}
 
@@ -24,7 +24,7 @@ In this section we will learn how to stop, start and remove containers.
 
 `docker container start sleepy`{{execute}}
 
-5) Now let's interact with the sleepy container terminal again:
+5) Interagissons de nouveau avec le terminal du conteneur sleepy :
 
 `docker container exec -it sleepy bash`{{execute}}
 
@@ -32,9 +32,9 @@ In this section we will learn how to stop, start and remove containers.
 
 `exit`{{execute}}
 
-Notice that the TEST.txt file is still there. That is because we only stopped and started and are interacting with the same container we created the file on.
+Notez que le fichier TEST.txt est toujours là. C'est parce que nous nous avons seulement arrêté et démarré et que nous interagissons avec le même conteneur que celui sur lequel nous avons créé le fichier.
 
-Now let's stop and remove the sleepy container:
+Maintenant, arrêtons-nous et enlevons le conteneur sleepy :
 
 `docker container stop sleepy`{{execute}}
 
