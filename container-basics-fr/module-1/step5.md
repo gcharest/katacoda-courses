@@ -1,14 +1,14 @@
-In this section, we will learn how to interact with an already running Docker container and force containers to continue running in the background.
+Dans cette section, nous allons apprendre comment interagir avec un conteneur Docker déjà en cours d'exécution et forcer les conteneurs à continuer à fonctionner en arrière-plan.
 
-1) Run the NGINX image (a web server that services http requests external to the host) and connect to STDIN and a terminal:
+1) Exécutez l'image NGINX (un serveur web qui gère les requêtes http externes à l'hôte) et connectez-vous à STDIN et à un terminal :
 
 `docker container ls`{{execute}}
 
 `docker container run -it --rm --name nginx nginx`{{execute}}
 
-Notice you get dropped into an interactive terminal, but you cannot do anything. Press ctrl+c to exit.
+Remarquez que vous êtes déposé dans une borne interactive, mais que vous ne pouvez rien faire. Appuyez sur ctrl+c pour quitter.
 
-2) Now, run the NGINX image in detached mode using the -d switch:
+2) Maintenant, lancez l'image NGINX en mode détaché en utilisant le commutateur -d :
 
 `docker container ls`{{execute}}
 
@@ -16,10 +16,10 @@ Notice you get dropped into an interactive terminal, but you cannot do anything.
 
 `docker container ls`{{execute}}
 
-Notice the port mapping - port 80 in the container has been mapped to port 80 on the host.
-Go to server https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/ and see the NGINX welcome page.
+Notez que le mappage de port - port 80 dans le conteneur a été mappé au port 80 sur l'hôte.
+Aller au serveur https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/ et consultez la page d'accueil de NGINX.
 
-3) Gain terminal access to detached container:
+3) Accédez au conteneur détaché par le terminal :
 
 `docker container exec -it nginx bash`{{execute}}
 
@@ -27,12 +27,12 @@ Go to server https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.kataco
 
 `docker container ls`{{execute}}
 
-4) You can also run commands and output the result to the console without actually attaching to a terminal in the container:
+4) Vous pouvez également exécuter des commandes et transmettre le résultat à la console sans l'attacher à un terminal dans le conteneur :
 
-`docker container exec -it nginx cat /etc/issue`{{execute}}. We can see that this commands shows us what version of linux the container is running. If we run `cat /etc/issue`{{execute}} in our terminal, we can see our host OS is different than that of the container.
+`docker container exec -it nginx cat /etc/issue`{{execute}}. Nous pouvons voir que cette commande nous montre quelle version de linux le conteneur est en cours d'exécution. Si nous lançons `cat /etc/issue`{{execute}} dans notre terminal, nous pouvons voir que notre OS hôte est différent de celui du conteneur.
 
-5) Let's stop the container `docker kill nginx`{{execute}}
+5) Arrêtons le conteneur `docker kill nginx`{{execute}}
 
-Now that we have stopped the container, it also does not show when we run `docker container ps -a`{{execute}}. This is because we used the --rm argument in the original run command that deletes the container completely when it stops.
+Maintenant que nous avons arrêté le conteneur, il ne s'affiche pas non plus lorsque nous exécutons `docker container ps -a`{{execute}}. C'est parce que nous avons utilisé l'argument --rm dans la commande d'exécution originale qui supprime complètement le conteneur quand il s'arrête.
 
-You would use the interactive commands to troubleshoot or debug containers
+Vous utiliseriez les commandes interactives pour dépanner ou déboguer les conteneurs
