@@ -1,6 +1,6 @@
-Now let's take a look at some containers logs. This is another good way to troubleshoot container issues.
+Jetons maintenant un coup d'œil à quelques journaux de conteneurs. C'est un autre bon moyen de dépanner les problèmes de conteneurs.
 
-Let's run NGINX container again and look at the logs:
+Exécutons à nouveau le conteneur NGINX et regardons les journaux :
 
 `docker container run -p 80:80 -d --rm --name nginx nginx`{{execute}}
 
@@ -10,4 +10,4 @@ Let's run NGINX container again and look at the logs:
 
 `docker container logs -f nginx`{{execute}}
 
-By using the -f switch, we are now live tailing the logs. Visit the NGINX page here and you will see the logs update. https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+En utilisant le commutateur -f, nous sommes maintenant en train de suivre les journaux en direct. Visitez la page NGINX ici et vous verrez la mise à jour des logs. https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
